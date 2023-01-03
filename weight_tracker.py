@@ -16,7 +16,7 @@ def track_weight(weight_input, fat_input, muscle_input):
         body_fat = check_decimal(fat_input)
         muscle_mass = check_decimal(muscle_input)
     except:
-        return "Please write a number"
+        return "Please write a number for each"
 
     # Get today's date
     today = datetime.now().strftime("%Y-%m-%d")
@@ -47,6 +47,5 @@ def track_weight(weight_input, fat_input, muscle_input):
         writer = csv.writer(file)
         # Add the current weight and date to the CSV file
         writer.writerow([today, weight, body_fat, muscle_mass])
-        return(weight,today)
-
-track_weight("87,9", "7", "28.2")
+        res = f"On {today}, you are {weight} kilos, with {body_fat}% body fat and {muscle_mass}% muscle mass."
+        return(res)
