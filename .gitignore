@@ -1,0 +1,5 @@
+/.ipynb_checkpoints
+/__pycache__
+/env
+/twilio_messaging.ipynb
+/weight_tracker.ipynb
