@@ -39,7 +39,7 @@ def track_weight(weight_input, fat_input, muscle_input):
             # Check if a weight has already been recorded for today's date
             for row in reader:
                 if row[0] == today:
-                    return("A weight has already been recorded for today.")
+                    return("Data has already been recorded for today.")
 
     # Open the CSV file in append mode
     with open('weight_tracker.csv', 'a', newline='') as file:
